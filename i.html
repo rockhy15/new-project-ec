@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce project</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="i.css">
+
+</head>
+
+<body ng-app="myApp">
+    <div class="search">
+        <div ng-controller="myCtrl">
+            <div style="display: flex;" id="a">
+                <div> <img src="headerlogo.png" alt="logo" style=" margin: 20px;width: 50%;"></div>
+
+                <input style="height: 26px;" id="searchinput" type="text" ng-model="searchText" size="35px"
+                    placeholder="Search Here...">
+                <button type="button" id="hello" class="btn btn-primary" ng-click="show(item)"
+                    style="position: absolute;">
+                    <i class="fas fa-search"></i>
+                </button>
+
+                <div> </div>
+            </div>
+
+
+            <div class="z">
+                <nav>
+                    <ul style="display: inline-flex; list-style-type: none;">
+                        <li class="items"><a href="#" ng-click="womenWatch()">T-SHIRTS</a></li>
+                        <li class="items"><a href="#" ng-click="bikes()"> BAGS</a></li>
+                        <li class="items"><a href="#" ng-click="menWatch()">PILLOWS </a></li>
+                        <li class="items"><a href="../assignment5/final.html">CONTACT</a></li>
+                        <li class="items" style="color: white;"><a href="#" ng-click="openMahesh()"><i type="button"
+                                    class="fa-solid  fa-cart-arrow-down"></i><span class="count"
+                                    ng-init="Items=0">{{Items}}</span> CART</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+
+
+            <div class="items">
+                <div class="row">
+                    <div class="col-md-3" ng-repeat="item in searchItems| filter:searchText||rocky |orderBy:'id'">
+                        <div class="card" ng-show="isVisible">
+                            <img ng-click="cart" ng-src="{{item.Image}}" alt="image">
+
+                            <div class="card-body">
+                                <h2 id="d">{{item.name}}</h2>
+                                <h6 id="b">{{item.desc}}</h6>
+                                <h3 id="c">{{item.price}}</h3>
+                                <span id="hearticon"></span><i ng-style="myStyle" ng-click="heart($event)"
+                                    class="fa-solid fa-heart" style="padding-left:85%; padding-bottom:10px;"></i></span>
+
+                                <button class="bt btn-primary" ng-click="add(item)"
+                                    style="height:50px; font-size: 13px;">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cartcontainer" ng-show="rockers">
+                <button id="mine"class=" btn btn-danger " ng-click="backToCart()"><i
+                    class="fa-solid fa-xmark"></i></button>
+                <h2>Our cart</h2>
+                <h4 class="m" ng-hide="foundList.length">
+                    No thing bought yet</h4>
+                <div class="row">
+                    <div class="col-md-2" ng-repeat="x in foundList">
+                        <div class="card" ng-show="isVisible">
+                            <img ng-click="cart" ng-src="{{x.Image}}" alt="image">
+                            <h2 id="a">{{x.name}}</h2>
+                            <h6 id="b">{{x.desc}}</h6>
+                            <h3 id="c">{{x.price}}</h3>
+                            <p ng-init="count = 0">
+                            <button class="btn-danger btn-xs" ng-click="in(cart)">+</button><br></br>
+                        
+                        {{cart.quantity}}
+                            <button class="btn-danger btn-xs" ng-click="de(cart)">-</button><br></br>
+                              <button class="btn-danger btn-xs" ng-click="remove(add)">Remove Item</button>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+
+
+    <script src="i.js"></script>
+</body>
+
+</html>

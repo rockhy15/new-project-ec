@@ -1,0 +1,157 @@
+.card {
+    margin: 20px;
+    padding: none;
+    
+   }
+  
+  
+.z {
+    position: absolute;
+    right: 1px;
+    top:50px;
+  padding-bottom: auto;
+    background-color: #666;
+    color: black;
+    text-shadow: 1px;
+    text-size-adjust: 10px;
+    font-size: smaller;
+  
+
+
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+
+}
+
+li,
+a {
+    padding-right: 30px;
+    text-decoration: none;
+    color: white;
+
+
+
+}
+
+#a {
+    font-size: 15px;
+    color: black;
+    background-color: #666;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+#d {
+    font-size: 15px;
+    color: black;
+}
+
+#b {
+    font-size: 15px;
+    color: black;
+}
+
+#c {
+    font-size: 20px;
+    color: black;
+}
+
+.aside {
+    align-items: center;
+}
+
+ #searchinput {
+   
+    margin-top: 5%;
+    margin-left: 0px;
+     font-size: 15px; 
+     width: 160px; 
+    
+}
+
+#container {
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    left: 100px;
+    background-color: rgb(249, 249, 250);
+}
+
+header {
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: pink;
+}
+
+.logo {
+    text-align: center;
+    padding: 20px;
+}
+
+.list_item {
+    display: inline;
+    padding: 25px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+.signup {
+    text-align: center;
+    color: black;
+    text-transform: capitalize;
+}
+
+
+
+
+.form-control {
+
+    box-shadow: 2px blue;
+}
+
+span {
+    color: red;
+}
+
+.m {
+    color: red;
+}
+.pen{
+    max-width: 100%;
+    height: auto;
+}
+#hello{
+ 
+   position: relative;
+  
+   right:65%;
+   top: 7%;
+height: 40px;
+   
+}  
+#cartcontainer {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    left: 300px;
+    width:1000px;
+    transform: 0.5s;
+    background-color: pink;
+    border-radius: 5px;
+
+}
+#mine {
+    display: flex;
+    float: center;
+    margin-right: 30px;
+    margin-top: 30px;
+    
+}
