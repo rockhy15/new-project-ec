@@ -76,14 +76,14 @@
                 </div>
             </div>
 
-            <div id="cartcontainer" ng-show="rockers">
+            <div id="cartcontainer" ng-show="rockers" class="col-md-10">
                 <button id="mine"class=" btn btn-danger " ng-click="backToCart()"><i
                     class="fa-solid fa-xmark"></i></button>
                 <h2>Our cart</h2>
                 <h4 class="m" ng-hide="foundList.length">
                     No thing bought yet</h4>
                 <div class="row">
-                    <div class="col-md-2" ng-repeat="x in foundList">
+                    <div class="col-md-4" ng-repeat="x in foundList">
                         <div class="card" ng-show="isVisible">
                             <img ng-click="cart" ng-src="{{x.Image}}" alt="image">
                             <h2 id="a">{{x.name}}</h2>
